@@ -1,12 +1,22 @@
 var fs = require('fs')
 
 
-function countryparse (countryname) {
+function countryparse (fileName, callBack) {
 
-	fs.readFile( __dirname + '/countries.json', 'utf8', function(err, read){
+	fs.readFile( fileName, 'utf8', function(err, data){
 		if (err) throw err;
-		read = JSON.parse(read)
-		// console.log(read)
+		array = JSON.parse(data)
+
+		callBack(array)
+
+	})
+
+}
+
+
+module.exports = countryparse 
+
+// console.log(read)
 		
 		// First we tried to capital the input instead of the search.
 		// This worked but only not with countries with multi names like:
@@ -22,16 +32,3 @@ function countryparse (countryname) {
 		// }
 
 		// countryname = countryname.capitalizeFirstLetter()
-
-		for (i = 0; i < read.length; i++) {
-			if (read[i].name.toLowerCase() == countryname.toLowerCase()) {
-				console.log ("Country: " + read[i].name)
-				console.log ("Top Level Domain: " + read[i].topLevelDomain)
-			}
-		}
-
-	})
-
-}
-
-module.exports = countryparse 

@@ -36,4 +36,13 @@ var fs = require('fs')
 
 var parsecountry = require( __dirname + "/app")
 
-parsecountry(process.argv[2])
+var countryname = (process.argv[2])
+
+parsecountry( __dirname + "/countries.json", function(read) {
+	for (i = 0; i < read.length; i++) {
+		if (read[i].name.toLowerCase() == countryname.toLowerCase()) {
+			console.log ("Country: " + read[i].name)
+			console.log ("Top Level Domain: " + read[i].topLevelDomain)
+		}
+	}
+})

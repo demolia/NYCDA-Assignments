@@ -36,7 +36,6 @@ var calcCompound = ( customer ) => {
 		optimistic: customer.finances.startcapital
 	}
 	customer.pension.duration = (customer.pension.age - customer.age)
-
 	// Do the interest math
 	for (var i = customer.pension.duration - 1; i >= 0; i--) {
 		customer.pension.endamount.pessimistic += (customer.finances.monthlyadd * 12)

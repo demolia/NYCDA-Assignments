@@ -1,0 +1,33 @@
+html
+	head
+	body
+		h1 Add an user to the data base
+
+		p here you can an add extra users to our already verry cool database
+
+		table
+			form(method='post', action= __dirname + '../data.json')
+			tr
+				td
+					label First Name:
+				td
+					input(name='firstName', type='text', id='firstName', placeholder='Type the first name here')
+
+			tr
+				td
+					label Last Name:
+				td
+					input(name='lastName', type='text', id='lastName', placeholder='Type the last name here')
+
+			tr
+				td
+					label Email adress:
+				td
+					input(name='email', type='text', id='email', placeholder='Type the email here')
+
+		input(type='submit', value='Submit the user to the database')
+
+
+
+
+		

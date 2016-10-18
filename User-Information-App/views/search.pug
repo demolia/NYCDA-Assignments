@@ -1,0 +1,10 @@
+html
+	head
+	body
+		h1 Search
+		br
+		form(method='post', action= __dirname + '../data.json')
+		label(for='searchbar') Please search by first or last name: 
+		input(name='searchbar', type='text', id='searchbar', placeholder='Type your search here')
+		input(type='submit', value='Search!?')
+

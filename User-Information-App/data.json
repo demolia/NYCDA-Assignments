@@ -1,0 +1,26 @@
+[
+	{
+		"firstName" : "Jimmy",
+		"lastName"  : "Voskuil",
+		"email"  : "jimmyvoskuil@msn.com"
+	},
+
+	{
+		"firstName" : "Selma",
+		"lastName"  : "Dorrestein",
+		"email"  : "selmadorrestein@gmail.com"
+	},
+
+	{
+		"firstName" : "Paul",
+		"lastName"  : "Motman",
+		"email"  : "paulvanmotman@hotmail.com"
+	},
+
+	{
+		"firstName" : "Mentor",
+		"lastName"  : "Palokaj",
+		"email"  : "reallymentor@gmail.com"
+	}
+
+]

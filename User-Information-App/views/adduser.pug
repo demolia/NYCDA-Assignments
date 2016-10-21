@@ -5,27 +5,18 @@ html
 
 		p here you can an add extra users to our already verry cool database
 
-		table
-			form(method='post', action= __dirname + '../data.json')
-			tr
-				td
-					label First Name:
-				td
-					input(name='firstName', type='text', id='firstName', placeholder='Type the first name here')
-
-			tr
-				td
-					label Last Name:
-				td
-					input(name='lastName', type='text', id='lastName', placeholder='Type the last name here')
-
-			tr
-				td
-					label Email adress:
-				td
-					input(name='email', type='text', id='email', placeholder='Type the email here')
-
-		input(type='submit', value='Submit the user to the database')
+		
+		form(method='POST', action='adduser')
+			label First Name:
+			input(name='firstName', type='text', id='firstName', placeholder='Type the first name here')
+			br
+			label Last Name:
+			input(name='lastName', type='text', id='lastName', placeholder='Type the last name here')
+			br
+			label Email adress:
+			input(name='email', type='email', id='email', placeholder='Type the email here')
+			br
+			input(type='submit', value='Submit the user to the database')
 
 
 

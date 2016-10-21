@@ -1,0 +1,11 @@
+html
+	head
+	body
+		h2 Search Completed
+		br
+		if message.length == 0 
+			p= tryagain
+			p Keep in mind that our amazing search engine is not capital sensitive
+		else
+			each thing in message
+				p #{thing}

@@ -145,6 +145,7 @@ app.post('/searchajax', function(req, res) {
 
 		let searchresult = []
 
+		console.log(searchbar)
 
 		for( i = 0; i < parsedData.length; i++ ){
 			if (parsedData[i].firstName.toLowerCase().indexOf(searchbar.toLowerCase()) !== -1 || 

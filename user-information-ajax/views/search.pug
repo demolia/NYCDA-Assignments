@@ -1,0 +1,20 @@
+//- https://www.youtube.com/watch?v=leilVbK0xQc
+
+html
+	header
+		title= "Searching for users"
+	body
+		h1= "Search bar"
+	
+		a(href="/") Home              	   
+		a(href="/adduser") Add Adding a user to the data base
+
+		form(method='POST', action= 'search' autocomplete="off")
+			Label(for="searchbarid") Searchbar 
+			input(name="searchbar", type="text", id="searchbarid", placeholder="please search for users here")
+			input(type="submit", value="Submit")
+
+	script(src="/jquery-3.1.1.min.js")
+	script(src="/main.js")
+
+

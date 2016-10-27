@@ -1,0 +1,19 @@
+html
+	header
+		title= "Searching for users"
+	body
+		h1= "Search bar"
+			p
+				a(href="/") Home             	   
+				a(href="/search") Searching for users 
+		form(method='POST', action= 'adduser')
+			Label(for="firstName") First Name: 
+			input(name="inputfirstName", type="text", id="firstName" placeholder="Type your first name")
+
+			Label(for="lastName") Last Name:  
+			input(name="inputlastname", type="text", id="lastName" placeholder="Type your last name")
+
+			Label(for="email") Email 
+			input(name="email", type="email", id="email" placeholder="Type your email")
+
+			input(type="submit", value="Submit")

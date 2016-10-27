@@ -1,0 +1,49 @@
+//- This file is to add comments to all my pug files:
+
+//- When creating a from input, give it a form (methode='', action='' <- where is the action taking place, most of the time on same page)
+//- Create a label for the input, give it the same if in (for='')
+//- Create a input bar, then could be done in a ul or ol as well
+//- Create a input submit button to tell the form when to sumbit 
+
+
+---- front-end
+Html
+<input type="text" id="searchbar" onkeyup="myFunction()">
+
+Javascript
+	function myFunction() {
+    	
+    	let userinput = $("#searchbar").val();
+
+    	$.post('/search',userinput,(data, status) =>{
+
+    		console.log(data)
+
+    	});
+
+
+----- back-end
+
+Node.js
+	app.post('/search', function(req, res) {
+  		console.log(req.body.searchbar)
+  		searchbar = req.body.searchbar
+  
+		fs.readFile('./data.json', function (err, data) {
+		if (err) throw err
+		let parsedData = JSON.parse(data)
+
+  		let searchresult = []
+
+	    
+	    for( i = 0; i < parsedData.length; i++ ){
+			if parsedData[i].firstName.toLowerCase().indexOf(searchbar.oLowerCase()) !== -1 || 
+				parsedData[i].lastName.toLowerCase().indexOf(searchbar.toLowerCase()) !== -1
+	    			searchresult.push(parsedData[i].firstName, parsedData[i].lastName)
+		}
+
+		res.send({ some: JSON.stringify({searchresult}) });
+	});
+
+	
+	

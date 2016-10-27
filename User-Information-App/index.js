@@ -6,6 +6,7 @@ const bodyParser 	= require('body-parser')
 const app 			= express ()
 
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static(__dirname +'/static'))
 
 app.set( 'view engine', 'pug')
 app.set( 'views', __dirname + '/views' )
@@ -48,6 +49,7 @@ app.post('/search', (request, response) =>{
 				// Door een komma toe te voegen maakt je een array met nieuwe objecten. Hierdoor worden ze indivueel geprint
 			} 
 		}
+		
 		 response.render('search-completed', { message: printedobjects, 
 		 	tryagain: "The user you tried to search " + "'" + request.body.searchbar + "'" + " was not found in our system please try again"} )
 
@@ -74,21 +76,10 @@ app.post('/adduser', (request, response) =>{
 		if ( error ) 
 			throw error
 		let parsedData = JSON.parse(data)
-		console.log(1)
-	
-		let objecttoadd = {
-			firstName: " ",
-			lastName: " ",
-			email: " "
-		} 
 
-		console.log (2)
+		console.log(request)
+		parsedData.push(request.body)
 
-		objecttoadd.firstName = request.body.firstName
-		objecttoadd.lastName = request.body.lastName
-		objecttoadd.email = request.body.email
-
-		parsedData.push(objecttoadd)
 
 		console.log (parsedData)
 

@@ -1,0 +1,17 @@
+html
+	header
+		title= title
+	body
+		h1= message
+		p
+			a(href="/search") Searching for users             	   
+			a(href="/adduser") Add Adding a user to the data base
+
+		p= "Here you see all the names in our data base"
+		each user in users
+			ul
+				li <p> First name: #{user.firstName}
+				li <p> Last name: #{user.lastName}
+				li <p> Email adress: #{user.email} 
+				<br> 
+		

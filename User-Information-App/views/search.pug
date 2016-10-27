@@ -1,12 +1,15 @@
 html
 	head
-		link(rel='stylesheet', href='/views/main.css', type='text/css' )
+		link(rerel='stylesheet', href= '/foundation-6.2.3-complete/css/foundation.css', type='text/css')
+		link(rel='stylesheet', href= 'main.css', type='text/css' )
 	body
-		h1 Search
-		br
-		form(method='POST', action= 'search')
-			label(for='searchbar') Please search by first or last name: 
-			input(name='searchbar', type='text', id='searchbar', placeholder='Type your search here')
-			input(type='submit', value='Search!?')
+		div(class="container")
+			div(class="header")
+				h1 Search
+				br
+				form(method='POST', action= 'search')
+					label(for='searchbar') Please search by first or last name: 
+					input(name='searchbar', type='text', id='searchbar', placeholder='Type your search here')
+					input(type='submit', value='Search!?')
 
 

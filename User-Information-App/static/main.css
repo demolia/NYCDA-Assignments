@@ -1,0 +1,15 @@
+h1 {
+	color: blue;
+}
+
+.container {
+	background-image: url( "img/images.jpeg");
+}
+
+.background {
+	color: green;
+	margin: 10px, auto, 10px auto;
+	padding-bottom: 10px;
+	padding-left: 50px	
+}
+

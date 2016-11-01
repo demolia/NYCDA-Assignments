@@ -136,8 +136,8 @@ app.post('/adduser', (request, response) =>{
 
 
 app.post('/searchajax', function(req, res) {
-	console.log(req.body.searchbar)
-	searchbar = req.body.searchbar
+	// console.log(req.body)
+	searchbar = req.body.data
 
 	fs.readFile('./data.json', function (err, data) {
 		if (err) throw err
@@ -145,16 +145,28 @@ app.post('/searchajax', function(req, res) {
 
 		let searchresult = []
 
-		console.log(searchbar)
+		// console.log(searchbar)
+
 
 		for( i = 0; i < parsedData.length; i++ ){
+			// This works, in console all names in the JSON file will be posted
+			// console.log(parsedData[i].firstName)
+
+			// To see the indexOf explained http://stackoverflow.com/questions/8993773/javascript-indexof-case-insensitive
+			// It checks if a string contains a part of a other string / number if so it will produce the index number 
+			// of that string. Else it will give -1, by !== -1, you are telling if IndexOf() is anything but -1 then push
+			// the data into a array. 
+
 			if (parsedData[i].firstName.toLowerCase().indexOf(searchbar.toLowerCase()) !== -1 || 
 				parsedData[i].lastName.toLowerCase().indexOf(searchbar.toLowerCase()) !== -1){
 	    			searchresult.push(parsedData[i].firstName, parsedData[i].lastName)
 				}
 		}
 
-		res.send({ some: JSON.stringify({searchresult}) })
+		// let print = JSON.stringify(searchresult)
+		// console.log (print)
+
+		res.send(searchresult )
 	})
 })
 

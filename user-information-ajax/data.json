@@ -55,23 +55,23 @@
 		"email": "HFJS@mail.com"
 	},
 	{
-		"inputfirstName": "Tom",
-		"inputlastname": "Groot",
+		"firstName": "Tom",
+		"lastName": "Groot",
 		"email": "t.groot@mail.com"
 	},
 	{
-		"inputfirstName": "sadsda",
-		"inputlastname": "asdd",
+		"firstName": "sadsda",
+		"lastName": "asdd",
 		"email": "asd@asd"
 	},
 	{
-		"inputfirstName": "dasdas",
-		"inputlastname": "asdasd",
+		"firstName": "dasdas",
+		"lastName": "asdasd",
 		"email": "asd@asd"
 	},
 	{
-		"inputfirstName": "fdsf",
-		"inputlastname": "sfsd",
+		"firstName": "fdsf",
+		"lastName": "sfsd",
 		"email": "sdf@sd"
 	}
 ]

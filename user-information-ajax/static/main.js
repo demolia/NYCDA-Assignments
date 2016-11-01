@@ -1,14 +1,45 @@
-alert("Hello World")
+// This alert was to test to see if the JavaScript was loaded :)
+// alert("Hello World")
 
-function myFunction() {
-			let userinput = $("#searchbarid").val();
-			$.post('/searchajax',userinput,(data, status) =>{
-				console.log(data)
-				console.log(some)
-			})
+$(document).ready(function() {}
+
+	function myFunction() {
+				let userinput = $("#searchbarid").val();
+				$.post('/searchajax',{data: userinput},(data, status) =>{
+					//  This is working, the data is being console.log
+					// console.log(data)
+					console.log(typeof data)
+					// document.write(data);
+				
+					$('.autocomplete').empty()
+					$( ".autocomplete" ).append("<p>" + data + "</p>")
+
+				})
+			}
+
+
+
+
+	$('#searchbarid').keyup(function(){
+
+		if (AjaxCanRun) {
+
+			AjaxCanRun = false
+
+		/// If false, the fuction will not run, if true it will runn
+		//
+		// console.log('Key was pressed') This Works fine :) 
+		// if (300 second have passed) {
+			myFunction()
+			// start counter
 		}
-		$('#searchbarid').keyup(function(){
-			// console.log('Key was pressed') This Works fine :) 
-				myFunction()
-		})
+	})	
+	// This set time out will make sure to see if the fuction can run
+
+		setTimeout(function() {
+			AjaxCanRun = true
+		}, 300))
+
+
+
 

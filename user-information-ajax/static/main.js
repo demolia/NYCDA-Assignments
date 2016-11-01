@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 		setTimeout(function() {
 		AjaxCanRun = true
-			}, 	3000)
+			}, 	300)
 
 	})
 })

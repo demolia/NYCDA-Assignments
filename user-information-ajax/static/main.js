@@ -36,9 +36,9 @@ $(document).ready(function() {}
 	}
 	// This set time out will make sure to see if the fuction can run
 
-		setTimeout(function() {
-			AjaxCanRun = true
-		}, 300)
+	setTimeout(function() {
+		AjaxCanRun = true
+	}, 300)
 
 
 

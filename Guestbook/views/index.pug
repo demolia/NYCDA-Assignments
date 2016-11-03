@@ -1,0 +1,54 @@
+html
+	head
+		head
+		title= "My Guestbook"
+		link( href="/resources/css/materialize.min.css" type="text/css" rel="stylesheet" )
+		link( href="/resources/main.css" type="text/css" rel="stylesheet" )
+	body
+		nav
+			div.nav-wrapper
+				a#logo.brand-logo Guesthouse 
+				ul.right
+					li
+						a( href="/" ) Home
+					li
+						a Contact
+		div#header.valign-wrapper
+			div.row.valign
+				div.col.l12
+					h1.center.white-text Please leave a message
+		main
+			div.container
+				div.row
+					div.col.l8.offset-l2
+						div#topcard.card
+							div.card-content.z-depth-5
+								p
+									a(href="/guestbook") See here the guestbook             	   
+								
+								form(method='POST', action='/', autocomplete="off")
+									Label(for="title") Title of your message 
+									input(name="title", type="text", id="title" placeholder="Add a title")
+
+									Label(for="message") Please leave here your message  
+									input(name="message", type="text", id="message" placeholder="Write your message here")
+									input(type="submit", value="Submit")
+
+	footer.page-footer
+		div.container
+			div.row
+				div.col.l6.s12
+					h5.white-text MB Footer
+					p.grey-text.text-lighten-3 Oh my god this footer is amahzing
+				div.col.l4.offset-l2.s12
+					h5.white-text Links
+					ul.grey-text.text-lighten-3
+						li OMG
+						li OM OMOMG
+						li OMG
+		div.footer-copyright
+			div.container.grey-text © 2025 Copyright Text
+	script( src="/resources/jquery-3.1.1.min.js" )
+	script( src="/resources/js/materialize.min.js" )
+	script( src="/resources/main.js" )
+	

@@ -1,0 +1,104 @@
+html
+	head
+		title= "My Guestbook"
+		link( href="/resources/css/materialize.min.css" type="text/css" rel="stylesheet" )
+		link( href="/resources/main.css" type="text/css" rel="stylesheet" )
+	body
+		nav
+			div.nav-wrapper
+				ul#slide-out.side-nav
+					li
+						.userView
+							.background
+								img(src='images/office.jpg')
+							a(href='#!user')
+								img.circle(src='images/yuna.jpg')
+							a(href='#!name')
+								span.white-text.name John Doe
+							a(href='#!email')
+								span.white-text.email jdandturk@gmail.com
+					li
+						a(href='#!')
+							i.material-icons cloud | First Link With Icon
+					li
+						a(href='#!') Second Link
+					li
+						.divider
+					li
+						a.subheader Subheader
+					li
+						a.waves-effect(href='#!') Third Link With Waves
+				a.button-collapse(href='#', data-activates='slide-out')
+					i.material-icons menu
+						a#logo.brand-logo Guesthouse 
+			ul.right
+				li
+					a( href="/" ) Home
+				li
+					a Contact
+				li
+					a( href="/guestbook" ) Guestbook
+		div#header.valign-wrapper
+			div.row.valign
+				div.col.l12
+					h1.center.white-text See here our guestbook
+	main
+		div.container
+				div.row
+					div.col.l8.offset-l2
+						div#topcard.card
+							div.card-content.z-depth-5
+								p
+									a(href="/") Home
+
+								p= "Here you see all messages to our Guestbook"
+								each thing in guestbook.reverse()
+									ul
+										li <p> Title: #{thing.title}
+										li <p> Message: #{thing.message}
+										<br>             	   
+
+
+		ul#slide-out.side-nav
+			li
+				.userView
+					.background
+						img(src='images/office.jpg')
+					a(href='#!user')
+						img.circle(src='images/yuna.jpg')
+					a(href='#!name')
+						span.white-text.name John Doe
+					a(href='#!email')
+						span.white-text.email jdandturk@gmail.com
+			li
+				a(href='#!')
+					i.material-icons cloud | First Link With Icon
+			li
+				a(href='#!') Second Link
+			li
+				.divider
+			li
+				a.subheader Subheader
+			li
+				a.waves-effect(href='#!') Third Link With Waves
+		a.button-collapse(href='#', data-activates='slide-out')
+			i.material-icons menu
+					
+	footer.page-footer
+		div.container
+			div.row
+				div.col.l6.s12
+					h5.white-text Guesthouse
+					p.grey-text.text-lighten-3 Thank you for visiting our gasthouses gastboook
+					p.grey-text.text-lighten-3 If you like to keep in touch follow us on social media
+				div.col.l4.offset-l2.s12
+					h5.white-text Social media
+					ul.grey-text.text-lighten-3
+						li Git hub
+						li Twitter
+						li Facebook
+		div.footer-copyright
+			div.container.grey-text © 2025 Copyright Text
+	script( src="/resources/jquery-3.1.1.min.js" )
+	script( src="/resources/js/materialize.min.js" )
+	script( src="/resources/main.js" )

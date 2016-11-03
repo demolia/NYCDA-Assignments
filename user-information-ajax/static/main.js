@@ -31,13 +31,16 @@ $(document).ready(function() {
 
 		/// If false, the fuction will not run, if true it will runn
 			AjaxCanRun = false
-		}
-
+		
 		// This set time out will make sure to see if the fuction can run
 
-		setTimeout(function() {
-		AjaxCanRun = true
+			setTimeout(function() {
+				AjaxCanRun = true
 			}, 	300)
+
+		
+
+		}
 
 	})
 })

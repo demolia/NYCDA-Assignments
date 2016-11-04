@@ -35,7 +35,7 @@ app.get('/guestbook', function (req, res) {
 	
 	pg.connect(connectionString, function (err, client, done) {
 		client.query('select * from guestbook', function (err, result) {
-			console.log(result.rows);
+			// console.log(result.rows);
 
 			let guestbookrestults = result.rows
 			done();

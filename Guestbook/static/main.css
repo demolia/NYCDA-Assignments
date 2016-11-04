@@ -27,3 +27,20 @@ nav, footer.page-footer {
 main {
 	flex: 1 0 auto;
 }
+
+
+nav a.button-collapse {
+    display: inline-table;
+}
+
+.navtext{
+	text-shadow: 2px 2px black;
+	font-size: 150%;
+	padding-left: 7pc;
+	margin-top: -45px;
+}
+
+.heroimg {
+	width: 100px;
+	border-radius: 100%;
+}

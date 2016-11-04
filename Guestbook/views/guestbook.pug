@@ -3,6 +3,16 @@ html
 		title= "My Guestbook"
 		link( href="/resources/css/materialize.min.css" type="text/css" rel="stylesheet" )
 		link( href="/resources/main.css" type="text/css" rel="stylesheet" )
+		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+		link( href="/resources/css/materialize.min.css" type="text/css" rel="stylesheet" )
+		link( href="/resources/main.css" type="text/css" rel="stylesheet" )
+		link( href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+		link( rel="apple-touch-icon" sizes="180x180" href="/resources/apple-touch-icon.png")
+		link( rel="icon" type="image/png" href="/resources/favicon-32x32.png" sizes="32x32")
+		link( rel="icon" type="image/png" href="/resources/favicon-16x16.png" sizes="16x16")
+		link( rel="manifest" href="/resources/manifest.json")
+		link( rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#5bbad5")
+		meta( name="theme-color" content="#ffffff")
 	body
 		nav
 			div.nav-wrapper
@@ -10,34 +20,34 @@ html
 					li
 						.userView
 							.background
-								img(src='images/office.jpg')
+								img(src='/resources/house.jpg')
 							a(href='#!user')
-								img.circle(src='images/yuna.jpg')
+								img.circle(src='/resources/ajax.png')
 							a(href='#!name')
-								span.white-text.name John Doe
+								span.white-text.name Welcome to the side nave
 							a(href='#!email')
-								span.white-text.email jdandturk@gmail.com
+								span.white-text.email Here you can browse all you want
 					li
-						a(href='#!')
-							i.material-icons cloud | First Link With Icon
+						a(href='/')
+							i.material-icons cloud HOME
 					li
-						a(href='#!') Second Link
+						a(href='/guestbook') House Guestbook 
 					li
 						.divider
 					li
-						a.subheader Subheader
+						a.subheader More Information
 					li
-						a.waves-effect(href='#!') Third Link With Waves
+						a.waves-effect(href='#!') Contact
 				a.button-collapse(href='#', data-activates='slide-out')
-					i.material-icons menu
-						a#logo.brand-logo Guesthouse 
-			ul.right
-				li
-					a( href="/" ) Home
-				li
-					a Contact
-				li
-					a( href="/guestbook" ) Guestbook
+					img.heroimg(src='/resources/house.jpg')
+					h1.navtext House Guestbook
+				ul.right
+					li
+						a( href="/" ) Home
+					li
+						a Contact
+					li
+						a( href="/guestbook" ) Guestbook
 		div#header.valign-wrapper
 			div.row.valign
 				div.col.l12
@@ -58,32 +68,6 @@ html
 										li <p> Message: #{thing.message}
 										<br>             	   
 
-
-		ul#slide-out.side-nav
-			li
-				.userView
-					.background
-						img(src='images/office.jpg')
-					a(href='#!user')
-						img.circle(src='images/yuna.jpg')
-					a(href='#!name')
-						span.white-text.name John Doe
-					a(href='#!email')
-						span.white-text.email jdandturk@gmail.com
-			li
-				a(href='#!')
-					i.material-icons cloud | First Link With Icon
-			li
-				a(href='#!') Second Link
-			li
-				.divider
-			li
-				a.subheader Subheader
-			li
-				a.waves-effect(href='#!') Third Link With Waves
-		a.button-collapse(href='#', data-activates='slide-out')
-			i.material-icons menu
-					
 	footer.page-footer
 		div.container
 			div.row

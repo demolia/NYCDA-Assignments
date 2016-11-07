@@ -9,12 +9,10 @@ $ (document).ready(function( ){
 	}, 3000)
 
 	if (Cookies.get ('Welcome') === 'Back' ) {
-		alert ('Welcome back') 
+		alert ('Welcome back!!') 
 		}
 
 		else { Cookies.set('Welcome', 'Back' )
 			alert ('Welcome')
 		}
-
-
 })
